@@ -10,12 +10,12 @@ set -e
 
 echo -e "Download new RPM packages"
 mkdir -p pkgs/rpms
-curl -L 'https://github.com/bitwarden/desktop/releases/download/v1.0.5/Bitwarden-1.0.5-x86_64.rpm' -o pkgs/rpms/bitwarden.rpm
+curl -L 'https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm' -o pkgs/rpms/bitwarden.rpm # download latest from bitwarden.com
 
 
 echo -e "Download new DEB packages"
 mkdir pkgs/debs/
-curl -L 'https://github.com/bitwarden/desktop/releases/download/v1.0.5/Bitwarden-1.0.5-amd64.deb' -o /tmp/bitwarden.deb
+curl -L 'https://bitwarden.com/download/?app=desktop&platform=linux&variant=deb' -o /tmp/bitwarden.deb # download latest from bitwarden.com
 
 # extract the public and private GPG keys from encrypted archive keys.tar with
 # the secret openssl pass KEYPASSPHRASE, which is stored in TravisCI variables
