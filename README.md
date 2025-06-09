@@ -1,6 +1,13 @@
 # The Bitwarden RPM&Deb Mirror Repository
 
 Original script by https://gitlab.com/paulcarroty/atom-rpm-deb-mirror/
+Original Bitwarden script by https://github.com/SISheogorath/bitwarden-rpm-deb-mirror
+
+> [!CAUTION]
+> DO NOT USE THIS FOR PRODUCTION, not only am I not affiliated with Bitwarden or any of the above people, but this repo was originally a test repo modified by SISheogorath, **You should not be blindly trusting me or SISheogorath**, and I am not liable for any problems that arrive becuase of this, I just want a way to auto update my bitwarden client.
+
+> [!IMPORTANT]
+> I do not provide **any** garantee that I will fix any issue that get posted in github, unless it directly effects me. Go fix it yourself or submit your pull request.
 
 Mirroring **the OFFICIAL Bitwarden packages for Linux** directly on GitHub. The update script code and TravisCI config & pipeline log is open source.
 
