@@ -1,1 +1,21 @@
+on:
+    schedule:
+        - cron: '0 0 * * 0'
 
+jobs:
+    check-upstream:
+        runs-on: 'ubuntu-latest'
+        steps:
+            - run: apt install reprepro
+            - run: apt install createrepo
+            - run: apt install curl
+            - run: apt install dpkg-dev
+            - run: apt install openssl
+            - run: apt install expect
+            - run: apt install debsigs
+            - run: chmod +x ./updaterepos.sh
+            - run: ./updaterepos.sh
+            - uses: JamesIves/github-pages-deploy-action@v4
+              with:
+                folder: pkgs
+     
