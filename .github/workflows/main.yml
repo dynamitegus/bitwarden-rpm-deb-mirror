@@ -25,6 +25,8 @@ jobs:
             - run: sudo apt-get install debsigs
             - run: sudo chmod +x ./updaterepos.sh
             - run: ./updaterepos.sh
+              env:
+                KEY: ${{ secrets.KEY }}
             - uses: JamesIves/github-pages-deploy-action@v4
               with:
                 folder: pkgs
