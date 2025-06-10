@@ -8,7 +8,7 @@ jobs:
         runs-on: 'ubuntu-latest'
         steps:
             - run: sudo apt-get install reprepro
-            - run: sudo apt-get install createrepo
+            - run: sudo apt-get install createrepo-c
             - run: sudo apt-get install curl
             - run: sudo apt-get install dpkg-dev
             - run: sudo apt-get install openssl
