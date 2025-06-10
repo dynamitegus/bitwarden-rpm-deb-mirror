@@ -2,6 +2,11 @@ on:
     schedule:
         - cron: '0 0 * * 0'
     workflow_dispatch:
+    workflow_call:
+        secrets:
+            KEY:
+                description: 'Signing Encryiption Key'
+                required: TRUE
 
 jobs:
     check-upstream:
