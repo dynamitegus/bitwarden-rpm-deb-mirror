@@ -4,7 +4,7 @@ on:
     workflow_dispatch:
     workflow_call:
         secrets:
-            KEY:
+            REPO_ENCRYPTIOM_KEY:
                 description: 'Signing Encryiption Key'
                 required: TRUE
 
@@ -12,7 +12,7 @@ jobs:
     check-upstream:
         runs-on: 'ubuntu-latest'
         env:
-            KEY: ${{ secrets.KEY }}
+            KEY: ${{ secrets.REPO_ENCRYPTIOM_KEY }}
         steps:
             - name: checkout repo
               uses: actions/checkout@v4
@@ -26,7 +26,7 @@ jobs:
             - run: sudo chmod +x ./updaterepos.sh
             - run: sh ./updaterepos.sh
               env:
-                KEY: ${{ secrets.KEY }}
+                KEY: ${{ secrets.REPO_ENCRYPTIOM_KEY }}
             - uses: JamesIves/github-pages-deploy-action@v4
               with:
                 folder: pkgs
