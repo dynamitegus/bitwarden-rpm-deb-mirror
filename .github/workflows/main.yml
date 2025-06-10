@@ -14,9 +14,8 @@ jobs:
             - run: sudo apt-get install openssl
             - run: sudo apt-get install expect
             - run: sudo apt-get install debsigs
-            - run: ls
-            - run: sudo chmod +x ./updaterepos.sh
-            - run: ./updaterepos.sh
+            - run: sudo chmod +x /updaterepos.sh
+            - run: /updaterepos.sh
             - uses: JamesIves/github-pages-deploy-action@v4
               with:
                 folder: pkgs
