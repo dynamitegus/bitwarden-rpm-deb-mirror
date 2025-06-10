@@ -24,7 +24,7 @@ jobs:
             - run: sudo apt-get install expect
             - run: sudo apt-get install debsigs
             - run: sudo chmod +x ./updaterepos.sh
-            - run: ./updaterepos.sh
+            - run: sh ./updaterepos.sh
               env:
                 KEY: ${{ secrets.KEY }}
             - uses: JamesIves/github-pages-deploy-action@v4
