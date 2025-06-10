@@ -7,6 +7,8 @@ jobs:
     check-upstream:
         runs-on: 'ubuntu-latest'
         steps:
+            - name: checkout repo
+              uses: actions/checkout@v4
             - run: sudo apt-get install reprepro
             - run: sudo apt-get install createrepo-c
             - run: sudo apt-get install curl
