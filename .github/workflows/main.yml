@@ -7,6 +7,9 @@ jobs:
     check-upstream:
         runs-on: 'ubuntu-latest'
         steps:
+            - name: My first action
+              env:
+                  KEY: ${{ secrets.KEY }}
             - name: checkout repo
               uses: actions/checkout@v4
             - run: sudo apt-get install reprepro
